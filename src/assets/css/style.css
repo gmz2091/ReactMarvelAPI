@@ -1,0 +1,29 @@
+#example div:first-child:hover {
+  transition: all ease 0.5s;
+  height: 100%;
+}
+#example::before {
+  background: #4e3ab3;
+  top: 0;
+  content: "";
+  height: 10px;
+  left: 0;
+  position: absolute;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  -webkit-transition: -webkit-all 0.3s;
+  transition: -webkit-all 0.3s;
+  transition: all 0.3s;
+  transition: all 0.3s, -webkit-all 0.3s;
+  width: 100%;
+  z-index: -100000000 !important;
+}
+
+.characters:hover #example::before {
+  transition: -webkit-all 0.3s;
+  transition: all 0.3s;
+  transition: all 0.3s, -webkit-all 0.3s;
+  height: 100%;
+  border-bottom-left-radius:  5%;
+  border-bottom-right-radius: 5%;
+}
